@@ -1,0 +1,60 @@
+<main>
+  <div class="top-row">
+<header>
+  <h1><span>Blur</span>Admin</h1>
+  <p>ANGULAR ADMIN PANEL FRONT-END FRAMEWORK</p>
+</header>
+<div class="buttons">
+  <button>Installation guidelines</button>
+  <button>Documentation</button>
+</div>
+
+<div class="version-container">
+   
+  <div class="mint-version">
+     <app-versions [version] = 'versions[0]' />
+  </div>
+ 
+  <div class="blur-version">
+    <app-versions [version] = 'versions[1]' />
+  </div>
+</div>
+</div>
+<div class="color-div">
+<div class="empty-area"></div>
+<div class="first-portion">
+  <h3 class="why-blurAdmin">Why BlurAdmin?</h3>
+  <div class="items">
+    @for (item of items; track item.title){
+      <div class="single-item">
+      <img [src]="item.img" alt="{{ item.title }}">
+      <h2>{{ item.title }}</h2>
+      <p>{{ item.textInput }}</p>
+      </div>
+    }
+
+  </div>
+</div>
+<div class="questions">
+<div class="second-portion">
+  <h3 class="subtitles">Is it free?</h3>
+  <p>Blur admin is completely free and MIT licensed. That means you can do whatever you want with it.</p>
+  <p>Initially we planned to sell it on template markets. But they <a href="#">rejected us several times</a>. That's why we decided to make it open-source. And honestly, we have completely no regrets about it!  And we suggest you to not waste your money and use our template instead of paid ones!  Trust us, it's better than large number of them.</p>
+</div>
+<div class="third-portion">
+  <h3 class="subtitles">How can I support you guys?</h3>
+  <p>Here's what you can do:</p>
+  <ul>
+    <li>Star <a href="#">our GitHub repo</a></li>
+    <li>Create pull requests, submit bugs, suggest new features</li>
+    <li>Follow <a href="#">us on Twitter</a></li>
+    <li>Like <a href="#">our page on Facebook</a></li>
+  </ul>
+</div>
+<div class="fourth-portion">
+  <h3 class="subtitles">Can I hire you?</h3>
+  <p>Yes! We are available for hire. Visit <a href="#">our homepage</a> or simply leave us a note to <a href="#">contact@akveo.com</a>. We will be happy to work with you!</p>
+</div>
+</div>
+</div>
+</main>

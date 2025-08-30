@@ -1,0 +1,9 @@
+<div class="version">
+    <p class="version-text">{{ version()!.text }}</p>
+    <a [href]="version()!.link.href" [class]="version()!.link.class">
+      <img
+        [src]="version()!.img.src"
+        [alt]="version()!.img.alt"
+      />
+      <p class="overlay-text">Demo</p>
+    </a>

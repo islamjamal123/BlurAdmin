@@ -1,0 +1,334 @@
+main {
+  color: white;
+  display: grid;
+  grid-template: auto 20px auto auto auto auto / 1fr;
+}
+
+.top-row {
+  grid-area: alias-top;
+  grid-row: 1 / 3;
+  grid-column: 1 / 2;
+  position: relative;
+}
+
+.top-row::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 40px;
+  bottom: 0;
+  left: 0;
+  box-shadow: inset 0px -30px 20px -13px rgba(255, 255, 255, 1);
+}
+
+.empty-area {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  background-color: white;
+}
+
+.first-portion {
+  grid-area: alias-first;
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+}
+
+.second-portion {
+  grid-area: alias-second;
+  grid-row: 4 / 5;
+  grid-column: 1 / 2;
+}
+
+.third-portion {
+  grid-area: alias-third;
+  grid-row: 5 / 6;
+  grid-column: 1 / 2;
+}
+
+.fourth-portion {
+  grid-area: alias-fourth;
+  grid-row: 6 / 7;
+  grid-column: 1 / 2;
+}
+
+.second-portion,
+.fourth-portion {
+  background-color: #f2f2f2;
+}
+
+.second-portion,
+.third-portion,
+.fourth-portion {
+  padding: 0px 30px 10px 30px;
+}
+
+.color-div {
+  background-color: white;
+  color: #484848;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin: 50px 0px 5px 0px;
+  font-size: 2rem;
+  color: white;
+}
+
+h1 span {
+  color: #209e91;
+}
+
+header p {
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+.version-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  gap: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 10px;
+  gap: 15px;
+}
+
+.buttons button:hover {
+  opacity: 0.9;
+}
+
+.buttons button {
+  font-size: 0.7rem;
+  width: 8rem;
+  height: 3rem;
+}
+
+button {
+  background-color: #cc7a6f;
+  color: white;
+  padding: 10px;
+  /* font-size: 1rem; */
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  min-height: 30px;
+}
+
+.why-blurAdmin {
+  text-align: center;
+  margin: 30px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.5rem;
+}
+
+.single-item h2 {
+  margin: 10px;
+}
+
+.single-item p {
+  font-size: 0.7rem;
+  text-align: center;
+  margin: 0 8px 20px 8px;
+}
+
+.subtitles {
+  text-align: center;
+  padding: 10px;
+}
+
+.questions {
+  font-size: 0.7rem;
+}
+
+.third-portion p {
+  margin-bottom: 10px;
+}
+
+ul {
+  margin-left: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #b54e40;
+}
+
+@media (min-width: 375px) {
+  header {
+    transform: scale(1.2);
+  }
+
+  .buttons {
+    margin-top: 50px;
+  }
+
+  .buttons button {
+    width: 9rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .buttons button {
+    width: 12rem;
+    font-size: 1.1rem;
+  }
+
+  .why-blurAdmin {
+    margin: 30px;
+    font-size: 1.8rem;
+  }
+
+  .single-item {
+    font-size: 0.9rem;
+  }
+
+  .single-item p,
+  .questions {
+    font-size: 1.1rem;
+  }
+
+  .subtitles {
+    margin-bottom: 5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .buttons button {
+    width: 16rem;
+    height: 3.8rem;
+    font-size: 1.4rem;
+  }
+
+  .buttons {
+    gap: 30px;
+  }
+
+  header h1 {
+    font-size: 3rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .version-container {
+    gap: 30px;
+  }
+
+  .why-blurAdmin {
+    margin: 30px;
+    font-size: 2.5rem;
+  }
+
+  .single-item {
+    font-size: 1.2rem;
+  }
+
+  .single-item p {
+    font-size: 1.5rem;
+    margin: 0 8px 40px 8px;
+  }
+
+  .questions {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+
+.buttons button {
+    width: 20rem;
+    height: 4.5rem;
+    font-size: 1.8rem;
+    margin: 30px 0 40px 0;
+  }
+
+  .buttons {
+    gap: 40px;
+  }
+
+  header h1 {
+    font-size: 5rem;
+    margin-top: 100px;
+  }
+
+  header p {
+    font-size: 1.5rem;
+  }
+
+  .version-container {
+    gap: 50px;
+  }
+
+  .why-blurAdmin {
+    margin: 50px;
+    font-size: 3.5rem;
+  }
+
+  .items {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .single-item {
+    font-size: 1.2rem;
+    margin: 0 30px 20px 8px;
+  }
+
+  .single-item h2 {
+    margin: 10px;
+  }
+
+  .single-item p {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 0 8px 20px 8px;
+  }
+
+  .subtitles {
+    font-size: 2.5rem;
+  }
+
+  .questions {
+    font-size: 2rem;
+  }
+
+  .third-portion p {
+    margin-bottom: 10px;
+  }
+
+  ul {
+    margin: 15px 0px 10px 20px;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,11 @@
+<nav>
+    <div class="logo-side" (click)="navCollapse()">
+     <!-- <i class="fa-solid fa-bars"></i> -->
+  <img [src]="Image" alt="BlueAdmin Logo" />
+  <h2><span>Blur</span>Admin</h2>
+  </div>
+  <div  class="buttons-side">
+    <button (click)="setActive('home')" [class.active]="activeButton === 'home'">Home</button>
+    <button (click)="setActive('docs')" [class.active]="activeButton === 'docs'">Docs</button>
+  </div>
+</nav>
